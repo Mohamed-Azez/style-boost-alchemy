@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Users, Award, BookOpen, Star } from 'lucide-react';
@@ -6,6 +7,7 @@ import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
 import StatsSection from '@/components/StatsSection';
 import CoursesSection from '@/components/CoursesSection';
+import TrendingCategoriesSection from '@/components/TrendingCategoriesSection';
 import TeamSection from '@/components/TeamSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import Footer from '@/components/Footer';
@@ -18,6 +20,7 @@ const Index = () => {
       <StatsSection />
       <ServicesSection />
       <CoursesSection />
+      <TrendingCategoriesSection />
       <TeamSection />
       <TestimonialsSection />
       <Footer />
