@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="flex items-center gap-2">
+                <Link to="/" className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-lg">E</span>
                   </div>
@@ -47,15 +48,15 @@ const Header = () => {
                     <span className="text-xl font-bold text-gray-900">ERTC</span>
                     <div className="text-xs text-gray-600">Academy</div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                <a href="#" className="text-emerald-600 font-medium hover:text-emerald-700 transition-colors">Home</a>
-                <a href="#" className="text-gray-700 hover:text-emerald-600 transition-colors">About Us</a>
+                <Link to="/" className="text-emerald-600 font-medium hover:text-emerald-700 transition-colors">Home</Link>
+                <Link to="/about" className="text-gray-700 hover:text-emerald-600 transition-colors">About Us</Link>
                 <div className="relative group">
                   <a href="#" className="text-gray-700 hover:text-emerald-600 transition-colors flex items-center gap-1">
                     Individual
@@ -101,8 +102,8 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#" className="block px-3 py-2 text-emerald-600 font-medium">Home</a>
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">About Us</a>
+              <Link to="/" className="block px-3 py-2 text-emerald-600 font-medium">Home</Link>
+              <Link to="/about" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">About Us</Link>
               <a href="#" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Individual</a>
               <a href="#" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Corporate</a>
               <a href="#" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Blog</a>
