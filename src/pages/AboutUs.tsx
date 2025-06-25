@@ -2,34 +2,53 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Users, Target, Award, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Users, Target, Award, CheckCircle, Phone, Mail, MapPin, BookOpen, TrendingUp, UserCheck } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const AboutUs = () => {
-  const values = [
+  const beliefs = [
     {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, from course content to student support.'
+      title: 'Results-Oriented',
+      description: 'ERTC Academy focuses strongly on achieving outstanding outcomes and tangible improvements, ensuring that training programs drive real progress and deliver significant value to both individuals and organizations'
     },
     {
-      icon: Users,
-      title: 'Innovation',
-      description: 'We embrace new technologies and methodologies to enhance the learning experience.'
+      title: 'Innovation-Driven',
+      description: 'We continuously adopt cutting-edge methodologies and technologies to enhance learning experiences and stay ahead of industry trends'
     },
     {
-      icon: Award,
-      title: 'Integrity',
-      description: 'We maintain the highest standards of honesty and transparency in all our interactions.'
+      title: 'Quality Excellence',
+      description: 'We maintain the highest standards in all our training programs and consulting services, ensuring maximum value for our clients'
     }
   ];
 
-  const achievements = [
-    '10+ Years of Excellence',
-    '5000+ Professionals Trained',
-    '95% Success Rate',
-    'ISO Certified Training Programs'
+  const services = [
+    {
+      title: 'Courses',
+      subtitle: 'Customized courses fulfilling your needs',
+      color: 'from-lime-500 to-green-600',
+      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      title: 'Training Programs',
+      subtitle: 'Custom-tailored programs enhancing skill development & performance',
+      color: 'from-lime-500 to-green-600',
+      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      title: 'Career Coaching',
+      subtitle: '1-on-1 Coaching, dedicated certified coaches to help achieving desired goals',
+      color: 'from-gray-100 to-gray-200',
+      textColor: 'text-gray-800',
+      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      title: 'Consulting Services',
+      subtitle: 'Strategic consulting to transform your organization',
+      color: 'from-gray-100 to-gray-200',
+      textColor: 'text-gray-800',
+      image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80'
+    }
   ];
 
   return (
@@ -50,107 +69,154 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* The Dawn Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="text-sm font-medium text-lime-500 mb-2 uppercase tracking-wide">
-                OUR MISSION
+                ABOUT US
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Transforming Careers Through Excellence
+                The Dawn
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                At ERTC Academy, we are dedicated to providing world-class training and consulting services that empower individuals and organizations to achieve their full potential. We believe in practical, hands-on learning that delivers immediate value.
+                After 25 years of rich expertise and continuous research when ERTC was firstly established in 2000, here comes the ERTC Academy to begin a new story aims for societal development, believing in the powerful impact of professional training courses and exceptional administrative and specialized consultations related to market needs, utilizing the most innovative and new-fashioned methods.
               </p>
-              <div className="space-y-4">
-                {achievements.map((achievement, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-6 h-6 text-emerald-600" />
-                    <span className="text-lg font-medium text-gray-700">{achievement}</span>
-                  </div>
-                ))}
+              
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">From Our Chairman's Quill:</h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  ERTC Academy offers a foundation for developing skills, acquiring knowledge, uncovering abilities, and accessing customized solutions to experience the success you're striving for.
+                </p>
               </div>
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
                 alt="Team collaboration" 
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-emerald-600">10+</div>
-                <div className="text-gray-600">Years Experience</div>
+              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border-2 border-dashed border-gray-300">
+                <div className="text-center">
+                  <div className="text-xs text-gray-500 mb-1">TRUSTED BY</div>
+                  <div className="text-3xl font-bold text-lime-500">75K+</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Values */}
+      {/* We Believe In Section */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="text-sm font-medium text-lime-500 mb-2 uppercase tracking-wide">
-              OUR VALUES
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              What Drives Us Forward
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our core values guide every decision we make and every service we provide.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Story */}
-      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80" 
-                alt="Learning environment" 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
+                alt="Professional woman" 
                 className="rounded-2xl shadow-2xl"
               />
             </div>
             <div>
               <div className="text-sm font-medium text-lime-500 mb-2 uppercase tracking-wide">
-                OUR STORY
+                DISCOVER MISSION
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                A Decade of Excellence
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                We Believe in:
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed mb-6">
-                Founded in 2014, ERTC Academy began with a simple vision: to bridge the gap between academic knowledge and practical industry skills. Over the years, we have evolved into a leading training and consulting organization.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Our journey has been marked by continuous innovation, adaptation to industry needs, and an unwavering commitment to quality. Today, we proudly serve individuals and organizations across various sectors, helping them navigate the complexities of modern business.
-              </p>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 group"
-              >
-                Learn More About Our Courses
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              
+              <div className="space-y-8">
+                {beliefs.map((belief, index) => (
+                  <div key={index}>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{belief.title}</h3>
+                    <p className="text-lg text-gray-600 leading-relaxed">{belief.description}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-8">
+                <Button 
+                  size="lg" 
+                  className="bg-lime-500 hover:bg-lime-600 text-white px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <BookOpen className="w-5 h-5 mr-2" />
+                  Learn More
+                </Button>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Looking Forward & Our Mission */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/44fc10a2-4530-4d12-b3f5-c891a360a282.png" 
+                alt="Looking Forward Illustration" 
+                className="w-full h-auto"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Looking Forward
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                To become the leading driver of professional growth, fostering a culture of continuous learning and development that empowers individuals and organizations to unlock their full potential and drive societal progress.
+              </p>
+              
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                To offer innovative, high-quality training courses and consultations, focusing on skill enhancement, growth fostering, strategic objectives achievement, and lifelong learning. We aim to impact different workforces and societies by staying relevant and leveraging expert instructors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive solutions designed to meet your professional development needs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
+                <div className="relative h-64">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-90`}></div>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-center">
+                    <h3 className={`text-3xl font-bold mb-4 ${service.textColor || 'text-white'}`}>
+                      {service.title}
+                    </h3>
+                    <p className={`text-lg leading-relaxed mb-6 ${service.textColor || 'text-white'}`}>
+                      {service.subtitle}
+                    </p>
+                    <Button 
+                      variant="outline" 
+                      className={`self-start ${service.textColor ? 'border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white' : 'border-white text-white hover:bg-white hover:text-emerald-600'}`}
+                    >
+                      Apply Now
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
